@@ -70,11 +70,6 @@ namespace Demo
                 return keyword.Length >= 3;
             }
         }
-        
-        private bool HasSufficientLength(string keyword)
-        {
-            return keyword.Length >= 3;
-        }
 
         private List<string> CitiesContaining(string keyword)
         {
