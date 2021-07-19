@@ -7,9 +7,9 @@ namespace Demo
     public class CitySearchTests
     {
         [Fact]
-        public void Test1()
+        public void NoCitiesFound()
         {
-            true.Should().BeTrue();
+            result.Should().BeEquivalentTo(A.EmptyList);
         }
     }
 }
