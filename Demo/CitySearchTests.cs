@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using FluentAssertions;
 using Xunit;
 using A = Demo.Helper;
@@ -47,7 +48,8 @@ namespace Demo
             var cities = new List<string> {"Nuernberg"};
             if (keyword == "ber")
             {
-                return new List<string> {"Nuernberg"};
+                var match = cities.First(x => x.Contains("ber"));
+                return new List<string> {match};
             }
 
             if (keyword == "rth")
