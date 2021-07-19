@@ -39,6 +39,14 @@ namespace Demo
             var result = searcher.Search("new");
             result.Should().BeEquivalentTo("New York", "Newark");
         }
+
+        [Fact]
+        public void QueryTooShort()
+        {
+            var searcher = new Searcher();
+            var result = searcher.Search("ne");
+            result.Should().BeEquivalentTo(A.EmptyList);
+        }
     }
 
     public class Searcher
