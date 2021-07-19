@@ -1,5 +1,6 @@
 using FluentAssertions;
 using Xunit;
+using A = Demo.Helper;
 
 namespace Demo
 {
