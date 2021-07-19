@@ -54,13 +54,18 @@ namespace Demo
         public List<string> Search(string keyword)
         {
 
-            if (keyword.Length >= 3)
+            if (HasSufficientLength(keyword))
             {
                 var matches = CitiesContaining(keyword);
                 return matches;
             }
 
             return A.EmptyList;
+        }
+
+        private bool HasSufficientLength(string keyword)
+        {
+            return keyword.Length >= 3;
         }
 
         private List<string> CitiesContaining(string keyword)
