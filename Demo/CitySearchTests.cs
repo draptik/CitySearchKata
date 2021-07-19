@@ -48,8 +48,8 @@ namespace Demo
             var cities = new List<string> {"Nuernberg", "Fuerth", "New York", "Newark"};
             if (keyword == "ber" || keyword == "rth")
             {
-                var match = cities.First(x => x.Contains(keyword));
-                return new List<string> {match};
+                var matches = cities.Where(x => x.Contains(keyword)).ToList();
+                return matches;
             }
 
             if (keyword == "new")
