@@ -52,17 +52,19 @@ namespace Demo
     public class Searcher
     {
         private readonly KeywordCheck _keywordCheck;
+        private readonly CitiesCatalog _citiesCatalog;
 
         public Searcher(KeywordCheck keywordCheck)
         {
             _keywordCheck = keywordCheck;
+            _citiesCatalog = new CitiesCatalog();
         }
 
         public List<string> Search(string keyword)
         {
             if (_keywordCheck.HasSufficientLength(keyword))
             {
-                var matches = new CitiesCatalog().CitiesContaining(keyword);
+                var matches = _citiesCatalog.CitiesContaining(keyword);
                 return matches;
             }
 
