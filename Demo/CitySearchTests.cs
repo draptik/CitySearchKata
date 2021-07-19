@@ -53,10 +53,10 @@ namespace Demo
     {
         public List<string> Search(string keyword)
         {
-            var cities = new List<string> {"Nuernberg", "Fuerth", "New York", "Newark"};
 
             if (keyword.Length >= 3)
             {
+                var cities = new List<string> {"Nuernberg", "Fuerth", "New York", "Newark"};
                 var matches = cities.Where(x => x.ToLower().Contains(keyword)).ToList();
                 return matches;
             }
