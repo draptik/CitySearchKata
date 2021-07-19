@@ -51,10 +51,16 @@ namespace Demo
 
     public class Searcher
     {
+        private readonly KeywordCheck _keywordCheck;
+
+        public Searcher()
+        {
+            _keywordCheck = new KeywordCheck(3);
+        }
+
         public List<string> Search(string keyword)
         {
-
-            if (new KeywordCheck(3).HasSufficientLength(keyword))
+            if (_keywordCheck.HasSufficientLength(keyword))
             {
                 var matches = CitiesContaining(keyword);
                 return matches;
