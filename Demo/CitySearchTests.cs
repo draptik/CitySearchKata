@@ -68,15 +68,15 @@ namespace Demo
 
             return A.EmptyList;
         }
+    }
 
-        public class CitiesCatalog
+    public class CitiesCatalog
+    {
+        public List<string> CitiesContaining(string keyword)
         {
-            public List<string> CitiesContaining(string keyword)
-            {
-                var cities = new List<string> {"Nuernberg", "Fuerth", "New York", "Newark"};
-                var matches = cities.Where(x => x.ToLower().Contains(keyword)).ToList();
-                return matches;
-            }
+            var cities = new List<string> {"Nuernberg", "Fuerth", "New York", "Newark"};
+            var matches = cities.Where(x => x.ToLower().Contains(keyword)).ToList();
+            return matches;
         }
     }
 
