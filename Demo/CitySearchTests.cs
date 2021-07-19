@@ -14,6 +14,12 @@ namespace Demo
             var result = searcher.Search("test");
             result.Should().BeEquivalentTo(A.EmptyList);
         }
+
+        [Fact]
+        public void CityFound()
+        {
+            result.Should().BeEquivalentTo("Nuernberg");
+        }
     }
 
     public class Searcher
