@@ -53,6 +53,11 @@ namespace Demo
             {
                 return new List<string> {"Fuerth"};
             }
+
+            if (keyword == "new")
+            {
+                return new List<string> {"New York", "Newark"};
+            }
             return A.EmptyList;
         }
     }
