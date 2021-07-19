@@ -18,6 +18,7 @@ namespace Demo
         [Fact]
         public void CityFound()
         {
+            var searcher = new Searcher();
             var result = searcher.Search("ber");
             result.Should().BeEquivalentTo("Nuernberg");
         }
