@@ -46,9 +46,9 @@ namespace Demo
         public List<string> Search(string keyword)
         {
             var cities = new List<string> {"Nuernberg", "Fuerth", "New York", "Newark"};
-            if (keyword == "ber" || keyword == "rth")
+            if (true)
             {
-                var matches = cities.Where(x => x.Contains(keyword)).ToList();
+                var matches = cities.Where(x => x.ToLower().Contains(keyword)).ToList();
                 return matches;
             }
 
