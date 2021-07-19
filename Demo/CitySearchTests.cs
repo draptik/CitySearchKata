@@ -14,4 +14,8 @@ namespace Demo
             result.Should().BeEquivalentTo(A.EmptyList);
         }
     }
+
+    public class Searcher
+    {
+    }
 }
