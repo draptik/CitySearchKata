@@ -70,30 +70,18 @@ namespace Demo
     {
         private readonly List<string> _cities;
 
-        public CitiesCatalog(List<string> cities)
-        {
-            _cities = cities;
-        }
+        public CitiesCatalog(List<string> cities) => _cities = cities;
 
-        public List<string> CitiesContaining(string keyword)
-        {
-            var matches = _cities.Where(x => x.ToLower().Contains(keyword)).ToList();
-            return matches;
-        }
+        public List<string> CitiesContaining(string keyword) => 
+            _cities.Where(x => x.ToLower().Contains(keyword)).ToList();
     }
 
     public class KeywordCheck
     {
         private readonly int _minRequiredLength;
 
-        public KeywordCheck(int minRequiredLength)
-        {
-            _minRequiredLength = minRequiredLength;
-        }
+        public KeywordCheck(int minRequiredLength) => _minRequiredLength = minRequiredLength;
 
-        public bool HasSufficientLength(string keyword)
-        {
-            return keyword.Length >= _minRequiredLength;
-        }
+        public bool HasSufficientLength(string keyword) => keyword.Length >= _minRequiredLength;
     }
 }
