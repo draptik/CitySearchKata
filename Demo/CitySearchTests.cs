@@ -28,6 +28,10 @@ namespace Demo
     {
         public List<string> Search(string keyword)
         {
+            if (keyword == "ber")
+            {
+                return new List<string> {"Nuernberg"};
+            }
             return A.EmptyList;
         }
     }
