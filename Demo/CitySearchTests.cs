@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using FluentAssertions;
 using Xunit;
 using A = Demo.Helper;
@@ -17,5 +18,9 @@ namespace Demo
 
     public class Searcher
     {
+        public List<string> Search(string keyword)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
