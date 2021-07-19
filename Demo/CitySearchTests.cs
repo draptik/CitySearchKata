@@ -34,6 +34,7 @@ namespace Demo
         [Fact]
         public void MultipleCitiesFound()
         {
+            var searcher = new Searcher();
             var result = searcher.Search("new");
             result.Should().BeEquivalentTo("New York", "Newark");
         }
