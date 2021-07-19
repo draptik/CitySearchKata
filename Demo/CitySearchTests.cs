@@ -74,10 +74,16 @@ namespace Demo
 
     public class CitiesCatalog
     {
+        private readonly List<string> _cities;
+
+        public CitiesCatalog()
+        {
+            _cities = new List<string> {"Nuernberg", "Fuerth", "New York", "Newark"};
+        }
+
         public List<string> CitiesContaining(string keyword)
         {
-            var cities = new List<string> {"Nuernberg", "Fuerth", "New York", "Newark"};
-            var matches = cities.Where(x => x.ToLower().Contains(keyword)).ToList();
+            var matches = _cities.Where(x => x.ToLower().Contains(keyword)).ToList();
             return matches;
         }
     }
