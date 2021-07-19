@@ -44,6 +44,7 @@ namespace Demo
     {
         public List<string> Search(string keyword)
         {
+            var cities = new List<string> {"Nuernberg"};
             if (keyword == "ber")
             {
                 return new List<string> {"Nuernberg"};
