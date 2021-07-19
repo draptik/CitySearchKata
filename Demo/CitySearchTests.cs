@@ -54,7 +54,7 @@ namespace Demo
         public List<string> Search(string keyword)
         {
 
-            if (HasSufficientLength(keyword))
+            if (new KeywordCheck().HasSufficientLength(keyword))
             {
                 var matches = CitiesContaining(keyword);
                 return matches;
@@ -65,7 +65,7 @@ namespace Demo
 
         public class KeywordCheck
         {
-            private bool HasSufficientLength(string keyword)
+            public bool HasSufficientLength(string keyword)
             {
                 return keyword.Length >= 3;
             }
