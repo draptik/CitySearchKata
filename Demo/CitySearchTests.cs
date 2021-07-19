@@ -62,7 +62,7 @@ namespace Demo
         {
             if (_keywordCheck.HasSufficientLength(keyword))
             {
-                var matches = CitiesContaining(keyword);
+                var matches = new CitiesCatalog().CitiesContaining(keyword);
                 return matches;
             }
 
