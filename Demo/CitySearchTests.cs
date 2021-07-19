@@ -11,7 +11,7 @@ namespace Demo
         [Fact]
         public void NoCitiesFound()
         {
-            var searcher = new Searcher();
+            var searcher = new Searcher(new KeywordCheck(3));
             var result = searcher.Search("test");
             result.Should().BeEquivalentTo(A.EmptyList);
         }
@@ -19,7 +19,7 @@ namespace Demo
         [Fact]
         public void CityFound()
         {
-            var searcher = new Searcher();
+            var searcher = new Searcher(new KeywordCheck(3));
             var result = searcher.Search("ber");
             result.Should().BeEquivalentTo("Nuernberg");
         }
@@ -27,7 +27,7 @@ namespace Demo
         [Fact]
         public void AnotherCityFound()
         {
-            var searcher = new Searcher();
+            var searcher = new Searcher(new KeywordCheck(3));
             var result = searcher.Search("rth");
             result.Should().BeEquivalentTo("Fuerth");
         }
@@ -35,7 +35,7 @@ namespace Demo
         [Fact]
         public void MultipleCitiesFound()
         {
-            var searcher = new Searcher();
+            var searcher = new Searcher(new KeywordCheck(3));
             var result = searcher.Search("new");
             result.Should().BeEquivalentTo("New York", "Newark");
         }
@@ -43,7 +43,7 @@ namespace Demo
         [Fact]
         public void QueryTooShort()
         {
-            var searcher = new Searcher();
+            var searcher = new Searcher(new KeywordCheck(3));
             var result = searcher.Search("ne");
             result.Should().BeEquivalentTo(A.EmptyList);
         }
@@ -53,9 +53,9 @@ namespace Demo
     {
         private readonly KeywordCheck _keywordCheck;
 
-        public Searcher()
+        public Searcher(KeywordCheck keywordCheck)
         {
-            _keywordCheck = new KeywordCheck(3);
+            _keywordCheck = keywordCheck;
         }
 
         public List<string> Search(string keyword)
