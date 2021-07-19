@@ -49,8 +49,6 @@ namespace Demo
             
             var matches = cities.Where(x => x.ToLower().Contains(keyword)).ToList();
             return matches;
-
-            return A.EmptyList;
         }
     }
 }
