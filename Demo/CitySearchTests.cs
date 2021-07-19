@@ -60,15 +60,10 @@ namespace Demo
             _citiesCatalog = citiesCatalog;
         }
 
-        public List<string> Search(string keyword)
-        {
-            if (_keywordCheck.HasSufficientLength(keyword))
-            {
-                return _citiesCatalog.CitiesContaining(keyword);
-            }
-
-            return A.EmptyList;
-        }
+        public List<string> Search(string keyword) =>
+            _keywordCheck.HasSufficientLength(keyword) 
+                ? _citiesCatalog.CitiesContaining(keyword) 
+                : A.EmptyList;
     }
 
     public class CitiesCatalog
