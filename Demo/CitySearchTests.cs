@@ -63,26 +63,26 @@ namespace Demo
             return A.EmptyList;
         }
 
-        public class KeywordCheck
-        {
-            private readonly int _minRequiredLength;
-
-            public KeywordCheck(int minRequiredLength)
-            {
-                _minRequiredLength = minRequiredLength;
-            }
-
-            public bool HasSufficientLength(string keyword)
-            {
-                return keyword.Length >= _minRequiredLength;
-            }
-        }
-
         private List<string> CitiesContaining(string keyword)
         {
             var cities = new List<string> {"Nuernberg", "Fuerth", "New York", "Newark"};
             var matches = cities.Where(x => x.ToLower().Contains(keyword)).ToList();
             return matches;
+        }
+    }
+
+    public class KeywordCheck
+    {
+        private readonly int _minRequiredLength;
+
+        public KeywordCheck(int minRequiredLength)
+        {
+            _minRequiredLength = minRequiredLength;
+        }
+
+        public bool HasSufficientLength(string keyword)
+        {
+            return keyword.Length >= _minRequiredLength;
         }
     }
 }
