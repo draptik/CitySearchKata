@@ -63,6 +63,14 @@ namespace Demo
             return A.EmptyList;
         }
 
+        public class KeywordCheck
+        {
+            private bool HasSufficientLength(string keyword)
+            {
+                return keyword.Length >= 3;
+            }
+        }
+        
         private bool HasSufficientLength(string keyword)
         {
             return keyword.Length >= 3;
