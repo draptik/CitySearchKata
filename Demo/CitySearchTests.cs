@@ -9,6 +9,7 @@ namespace Demo
         [Fact]
         public void NoCitiesFound()
         {
+            var result = searcher.Search("test");
             result.Should().BeEquivalentTo(A.EmptyList);
         }
     }
