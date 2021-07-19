@@ -30,6 +30,12 @@ namespace Demo
             var result = searcher.Search("rth");
             result.Should().BeEquivalentTo("Fuerth");
         }
+
+        [Fact]
+        public void MultipleCitiesFound()
+        {
+            result.Should().BeEquivalentTo("New York", "Newark");
+        }
     }
 
     public class Searcher
