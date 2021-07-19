@@ -40,6 +40,11 @@ namespace Demo
             {
                 return new List<string> {"Nuernberg"};
             }
+
+            if (keyword == "rth")
+            {
+                return new List<string> {"Fuerth"};
+            }
             return A.EmptyList;
         }
     }
