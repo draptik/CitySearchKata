@@ -22,6 +22,12 @@ namespace Demo
             var result = searcher.Search("ber");
             result.Should().BeEquivalentTo("Nuernberg");
         }
+        
+        [Fact]
+        public void AnotherCityFound()
+        {
+            result.Should().BeEquivalentTo("Fuerth");
+        }
     }
 
     public class Searcher
