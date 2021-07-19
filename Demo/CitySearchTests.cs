@@ -46,11 +46,9 @@ namespace Demo
         public List<string> Search(string keyword)
         {
             var cities = new List<string> {"Nuernberg", "Fuerth", "New York", "Newark"};
-            if (true)
-            {
-                var matches = cities.Where(x => x.ToLower().Contains(keyword)).ToList();
-                return matches;
-            }
+            
+            var matches = cities.Where(x => x.ToLower().Contains(keyword)).ToList();
+            return matches;
 
             return A.EmptyList;
         }
