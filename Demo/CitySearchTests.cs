@@ -26,6 +26,7 @@ namespace Demo
         [Fact]
         public void AnotherCityFound()
         {
+            var result = searcher.Search("rth");
             result.Should().BeEquivalentTo("Fuerth");
         }
     }
