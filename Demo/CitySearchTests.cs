@@ -65,9 +65,16 @@ namespace Demo
 
         public class KeywordCheck
         {
+            private readonly int _minRequiredLength;
+
+            public KeywordCheck()
+            {
+                _minRequiredLength = 3;
+            }
+
             public bool HasSufficientLength(string keyword)
             {
-                return keyword.Length >= 3;
+                return keyword.Length >= _minRequiredLength;
             }
         }
 
