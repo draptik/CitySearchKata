@@ -52,10 +52,6 @@ namespace Demo
                 return matches;
             }
 
-            if (keyword == "new")
-            {
-                return new List<string> {"New York", "Newark"};
-            }
             return A.EmptyList;
         }
     }
