@@ -48,7 +48,7 @@ namespace Demo
             var cities = new List<string> {"Nuernberg"};
             if (keyword == "ber")
             {
-                var match = cities.First(x => x.Contains("ber"));
+                var match = cities.First(x => x.Contains(keyword));
                 return new List<string> {match};
             }
 
