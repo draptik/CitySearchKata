@@ -20,7 +20,7 @@ namespace Demo
     {
         public List<string> Search(string keyword)
         {
-            throw new System.NotImplementedException();
+            return A.EmptyList;
         }
     }
 }
